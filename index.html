@@ -1,80 +1,623 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>My web page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pooyamoini</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="https://avatars1.githubusercontent.com/u/45311226?v=4" type="image/png"></head>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display:,300, 400, 700" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
   <body>
-    
-    <div class="site-wrap">
-
-      <a href="#" class="offcanvas-toggle js-offcanvas-toggle">Menu</a>
-      <div class="offcanvas_menu" id="offcanvas_menu">
-        <ul class="mb-5">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Courses</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-        <ul class="social">
-          <li><a href="https://www.linkedin.com/in/pouya-moeini-472b29177/" class="fa fa-linkedin"></a></li>
-          <li><a href="https://github.com/pooyamoini" class="fa fa-git"></a></li>
-          <li><a href="https://www.instagram.com/pmoini/" class="fa fa-instagram"></a></li>
-        </ul>
-
-<!-- </br>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-      </div>
-      
-      <aside style="background-image: url(./profile_big.jpg);"></aside>
-      <main>
-        <h1 class="mb-0">Amir Pouya Moeini</h1>
-        <br/>
-        <strong>Comuter Engineer student at <a href="http://www.en.sharif.edu" style="color: #b3b3b3;">Sharif university of technology(SUT)</a></strong>
-        <div class="mb-5">
-          <br/>
-        <p class="lead mb-3">From the beginning, my only interest was Physics and I spent a very serious time study-ing physics in high school and eventually it was so successful for me. But entering uni-versity completely changed my thoughts and somehow that atmosphere was new forme so first year in university for me was time to get used to this space. By far I’ve workedas a backend and frontend developer but my very serious interest is to become a datascientist. Thus I’ve spent the last months researching this field to improve my know-ledge and skills also I decided to study mathematics as my second major to strengthen-ing my mathematical skills. These days one of my routines is researching this branchof science and reading the related papers.</p>
-        </div>
-        <p>My Email address: pooyamoini2000@gmail.com</p>
-        <br/>
-        <p>
-          <a class="mr-2 mb-2" href="https://www.linkedin.com/in/pouya-moeini-472b29177/">Linkedin</a>
-          <a href="https://github.com/pooyamoini" class="mr-2 mb-2">Github</a>
-          <a href="https://www.kaggle.com/pooyamoini" class="mr-2 mb-2">Kaggle</a> 
-       </p>
-        </div>
-        
-      </main>
+    <div id="loading">
+      <div id="spinner"></div>
     </div>
+    <div id="profile">
+      <div id="profile_img" style="background: url(https://avatars1.githubusercontent.com/u/45311226?v=4) center;"></div>
+      <div id="username"><span style="display:block;">pooya</span><a href="https://github.com/pooyamoini">@pooyamoini</a></div>
+      <div id="userbio" style="display: none;">undefined</div>
+      <div id="about">
+                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
+                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
+                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
+                <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
+                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
+                <div class="socials">
+                <span style="display:none !important;"><a href="https://www.twitter.com/null" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
+                <span style="display:none !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
+                <span style="display:none !important;"><a href="https://www.linkedin.com/in/null/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
+                <span style="display:none !important;"><a href="https://www.medium.com/@null/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
+                </div>
+                </div>
+    </div>
+    <div id="display">
+      <div id="work">
+        <h1>Work.</h1>
+        <div class="projects" id="work_section">
+                        <a href="https://github.com/ayounesi/Ai-Challange" target="_blank">
+                        <section>
+                            <div class="section_title">Ai-Challange</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Java</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/2048" target="_blank">
+                        <section>
+                            <div class="section_title">2048</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Java</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/project" target="_blank">
+                        <section>
+                            <div class="section_title">project</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/web-project-backend" target="_blank">
+                        <section>
+                            <div class="section_title">web-project-backend</div>
+                            <div class="about_section">
+                            <span style="display:block;">The backend of web project - 2020</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/web-project" target="_blank">
+                        <section>
+                            <div class="section_title">web-project</div>
+                            <div class="about_section">
+                            <span style="display:block;">Sharif University of Technology  - Web Programming Project (Front-End)</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/pooyamoini.github.io" target="_blank">
+                        <section>
+                            <div class="section_title">pooyamoini.github.io</div>
+                            <div class="about_section">
+                            <span style="display:block;">http://pooyamoini.github.io/</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Web-HW" target="_blank">
+                        <section>
+                            <div class="section_title">Web-HW</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Digit-detector" target="_blank">
+                        <section>
+                            <div class="section_title">Digit-detector</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/GAN-notes" target="_blank">
+                        <section>
+                            <div class="section_title">GAN-notes</div>
+                            <div class="about_section">
+                            <span style="display:block;">my notes on GAN.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Cat-or-Dog" target="_blank">
+                        <section>
+                            <div class="section_title">Cat-or-Dog</div>
+                            <div class="about_section">
+                            <span style="display:block;">Cat or Dog detection based on deep learning</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Hotdog-or-Not" target="_blank">
+                        <section>
+                            <div class="section_title">Hotdog-or-Not</div>
+                            <div class="about_section">
+                            <span style="display:block;">Hotdog or Not detection based on deep learning</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Adversarial-Examples" target="_blank">
+                        <section>
+                            <div class="section_title">Adversarial-Examples</div>
+                            <div class="about_section">
+                            <span style="display:block;">Implementation of Adversarial attacks</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/sadraheydari/CA-Project-Lib" target="_blank">
+                        <section>
+                            <div class="section_title">CA-Project-Lib</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Verilog</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/GAN-projects" target="_blank">
+                        <section>
+                            <div class="section_title">GAN-projects</div>
+                            <div class="about_section">
+                            <span style="display:block;">my GAN projects</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a></div>
+      </div>
+      <div id="forks" style="display: block;">
+        <h1>Forks.</h1>
+        <div class="projects" id="forks_section">
+                        <a href="https://github.com/pooyamoini/Semantic-UI-React" target="_blank">
+                        <section>
+                            <div class="section_title">Semantic-UI-React</div>
+                            <div class="about_section">
+                            <span style="display:block;">The official Semantic-UI-React integration</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/stylegan2" target="_blank">
+                        <section>
+                            <div class="section_title">stylegan2</div>
+                            <div class="about_section">
+                            <span style="display:block;">StyleGAN2 - Official TensorFlow Implementation</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/stylegan2-pytorch" target="_blank">
+                        <section>
+                            <div class="section_title">stylegan2-pytorch</div>
+                            <div class="about_section">
+                            <span style="display:block;">Simplest working implementation of Stylegan2 in Pytorch</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/detectron2" target="_blank">
+                        <section>
+                            <div class="section_title">detectron2</div>
+                            <div class="about_section">
+                            <span style="display:block;">Detectron2 is FAIR's next-generation platform for object detection and segmentation.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/PyTorch-GAN" target="_blank">
+                        <section>
+                            <div class="section_title">PyTorch-GAN</div>
+                            <div class="about_section">
+                            <span style="display:block;">PyTorch implementations of Generative Adversarial Networks.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/the-gan-zoo" target="_blank">
+                        <section>
+                            <div class="section_title">the-gan-zoo</div>
+                            <div class="about_section">
+                            <span style="display:block;">A list of all named GANs!</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/pysot" target="_blank">
+                        <section>
+                            <div class="section_title">pysot</div>
+                            <div class="about_section">
+                            <span style="display:block;">SenseTime Research platform for single object tracking, implementing algorithms like SiamRPN and SiamMask.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/gans-awesome-applications" target="_blank">
+                        <section>
+                            <div class="section_title">gans-awesome-applications</div>
+                            <div class="about_section">
+                            <span style="display:block;">Curated list of awesome GAN applications and demo</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/pytorch-cnn-visualizations" target="_blank">
+                        <section>
+                            <div class="section_title">pytorch-cnn-visualizations</div>
+                            <div class="about_section">
+                            <span style="display:block;">Pytorch implementation of convolutional neural network visualization techniques</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Deep-Learning-Papers-Reading-Roadmap" target="_blank">
+                        <section>
+                            <div class="section_title">Deep-Learning-Papers-Reading-Roadmap</div>
+                            <div class="about_section">
+                            <span style="display:block;">Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech!</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/awesome-deep-learning-papers" target="_blank">
+                        <section>
+                            <div class="section_title">awesome-deep-learning-papers</div>
+                            <div class="about_section">
+                            <span style="display:block;">The most cited deep learning papers</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/awesome-interpretable-machine-learning" target="_blank">
+                        <section>
+                            <div class="section_title">awesome-interpretable-machine-learning</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/modular-rl" target="_blank">
+                        <section>
+                            <div class="section_title">modular-rl</div>
+                            <div class="about_section">
+                            <span style="display:block;">[ICML 2020] PyTorch Code for "One Policy to Control Them All: Shared Modular Policies for Agent-Agnostic Control"</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/PyTorch-VAE" target="_blank">
+                        <section>
+                            <div class="section_title">PyTorch-VAE</div>
+                            <div class="about_section">
+                            <span style="display:block;">A Collection of Variational Autoencoders (VAE) in PyTorch.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/pytorch-lightning" target="_blank">
+                        <section>
+                            <div class="section_title">pytorch-lightning</div>
+                            <div class="about_section">
+                            <span style="display:block;">The lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/pytorch-cnn-adversarial-attacks" target="_blank">
+                        <section>
+                            <div class="section_title">pytorch-cnn-adversarial-attacks</div>
+                            <div class="about_section">
+                            <span style="display:block;"> Pytorch implementation of convolutional neural network adversarial attack techniques </span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/adversarial-examples-pytorch" target="_blank">
+                        <section>
+                            <div class="section_title">adversarial-examples-pytorch</div>
+                            <div class="about_section">
+                            <span style="display:block;">Implementation of Papers on Adversarial Examples</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/spark" target="_blank">
+                        <section>
+                            <div class="section_title">spark</div>
+                            <div class="about_section">
+                            <span style="display:block;">Apache Spark - A unified analytics engine for large-scale data processing</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/DeepLearningFlappyBird" target="_blank">
+                        <section>
+                            <div class="section_title">DeepLearningFlappyBird</div>
+                            <div class="about_section">
+                            <span style="display:block;">Flappy Bird hack using Deep Reinforcement Learning (Deep Q-learning).</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Practical_RL" target="_blank">
+                        <section>
+                            <div class="section_title">Practical_RL</div>
+                            <div class="about_section">
+                            <span style="display:block;">A course in reinforcement learning in the wild</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/aps2019project/Practical_RL" target="_blank">
+                        <section>
+                            <div class="section_title">Practical_RL</div>
+                            <div class="about_section">
+                            <span style="display:block;">A course in reinforcement learning in the wild</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/Reinforcement-Learning" target="_blank">
+                        <section>
+                            <div class="section_title">Reinforcement-Learning</div>
+                            <div class="about_section">
+                            <span style="display:block;">Learn Deep Reinforcement Learning in 60 days! Lectures &amp; Code in Python. Reinforcement Learning + Deep Learning</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/jekyll-now" target="_blank">
+                        <section>
+                            <div class="section_title">jekyll-now</div>
+                            <div class="about_section">
+                            <span style="display:block;">Build a Jekyll blog in minutes, without touching the command line.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/CS330-Stanford-2019" target="_blank">
+                        <section>
+                            <div class="section_title">CS330-Stanford-2019</div>
+                            <div class="about_section">
+                            <span style="display:block;">My notes and assignment solutions for Stanford CS330 (Fall 2019) Deep Multi-Task and Meta Learning</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pooyamoini/reinforcement-learning-stanford" target="_blank">
+                        <section>
+                            <div class="section_title">reinforcement-learning-stanford</div>
+                            <div class="about_section">
+                            <span style="display:block;">🕹️ CS234: Reinforcement Learning, Winter 2019 | YouTube videos 👉</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a></div>
+      </div>
+      <div id="blog_section">
+        <h1>Blog.</h1>
+        <div id="blogs"></div>
+      </div>
+      <div id="footer">
+        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("blog.json", function(blog) {
+        blog = blog || [];
+        if (blog.length == 0) {
+          return (document.getElementById("blog_section").style.display =
+            "none");
+        }
+        for (var i = 0; i < blog.length; i++) {
+          $("#blogs").append(`
+            <a href="./blog/${blog[i].url_title}/" target="_blank">
+                <section>
+                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
+                    <div class="blog_container">
+                        <div class="section_title">${blog[i].title}</div>
+                        <div class="about_section">
+                            ${blog[i].sub_title}
+                        </div>
+                    </div>
+                </section>
+            </a>
+            `);
+        }
+      }).fail(function() {
+        return (document.getElementById("blog_section").style.display = "none");
+      });
+    </script>
 
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+    <script>
+      const magicProjectsGrid = new MagicGrid({
+        container: "#work_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/main.js"></script>
+      const magicForksGrid = new MagicGrid({
+        container: "#forks_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-  </body>
-</html>
+      $("document").ready(() => {
+        magicProjectsGrid.listen();
+        magicForksGrid.listen();
+      });
+    </script>
+  
+
+</body></html>
